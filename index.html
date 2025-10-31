@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestra Pagina❤️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+      <!-- BOTÓN DE INICIO -->
+  <div id="startScreen" style="
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfa8e1;
+    z-index: 30000;
+  ">
+  <button id="startButton" style="
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+  ">Comenzar</button>
+  
+  </div>
+
+<div id="introGif" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #bfa8e1; /* el fondo morado */
+    justify-content: center;
+    align-items: center;
+    z-index: 31000;
+    overflow: hidden;
+    display: flex;
+">
+    <img src="lilies.gif" alt="Flores creciendo" style="
+        transform: translateY(80px); /* mantiene la posición como antes */
+    ">
+</div>
+
+
+
+    <!-- ---------- PANTALLA DE CONTRASEÑA ---------- -->
+    <div id="passwordScreen" style="
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #bfa8e1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 32000;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+    ">
+    <h2 style="margin-bottom: 15px;">Inicia Sesión</h2>
+    <p style="margin-bottom: 20px;">Ingresá la contraseña</p>
+    <input type="password" id="passwordInput" placeholder="Escribila aquí..." style="
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 16px;
+    ">
+    <button id="passwordButton" style="
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #8544ff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    ">Confirmar 💫</button>
+    <p id="passwordError" style="color: #ff0000; margin-top: 10px; display: none;">
+    CONTRASEÑA INCORRECTA!!!
+  </p>
+  </div>
+
+
+
+
+  
+
+  <!----------------------TITULO------------------->
+  <h1 id="topTitle">Bienvenida <br>a<br>Nuestra Página 🌸</h1>
+
+
+
+  <!-- ---------- BOTON PARA CALENDARIO ---------- -->
+  <button id="toggleCalendar">Diario</button>
+
+
+  <!-- ---------- CALENDARIO ---------- -->
+<div id="calendar">
+  <div class="calendar-header" style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+    <button id="prevMonth" aria-label="Mes anterior" style="background:none; border:none; cursor:pointer;">◀</button>
+
+    <h3 id="monthYear" style="margin:0; flex:1; text-align:center;"></h3>
+
+    <div style="display:flex; gap:8px; align-items:center;">
+      <button id="nextMonth" aria-label="Mes siguiente" style="background:none; border:none; cursor:pointer;">▶</button>
+      <button id="closeCalendar" aria-label="Cerrar calendario" style="
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #5a0048;
+        cursor: pointer;
+        padding: 4px 6px;
+      ">✖</button>
+    </div>
+  </div>
+
+
+
+    <div id="daysOfWeek">
+      <div>Dom</div><div>Lun</div><div>Mar</div><div>Mie</div><div>Jue</div><div>Vie</div><div>Sab</div>
+    </div>
+    <div id="daysGrid"></div>
+  </div>
+
+  <!-- ---------- POPUP PARA EL DÍA SELECCIONADO ---------- -->
+  <div id="dayPopup" class="dayPopup">
+    <div class="dayPopup-content">
+      <h2 id="popupTitle"></h2>
+      <p id="popupText">Que nos espera hoy...</p>
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <button id="claimBtn">Reclamar</button>
+        <button id="closePopup">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- POPUP PARA LEER TEXTO DEL DÍA ---------- -->
+  <div id="viewDayPopup" class="dayPopup">
+    <div class="dayPopup-content">
+      <h2 id="viewDayTitle"></h2>
+      <p id="viewDayText"></p>
+      <div style="display:flex; justify-content:center; margin-top:10px;">
+        <button id="closeViewDay">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón para reproducir / pausar música -->
+  <button id="toggleMusic" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+  ">🎵</button>
+
+
+
+
+
+
+
+
+
+  <!-- ---------- SCRIPT EXTERNO ---------- -->
+  <script src="scripts.js" defer></script>
+
+  <!-- Música de fondo -->
+<audio id="bgMusic" loop>   
+  <source src="music-1.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+</body>
+</html>
+
+
