@@ -62,7 +62,7 @@ setInterval(createFallingFlower, 200);
 
 // ----------------- ESTALLIDO DE CORAZONES -----------------
 document.addEventListener("click", (e) => {
-  const numberOfHearts = 10;
+  const numberOfHearts = 5;
   const heartTypes = ["💖", "❤️", "💘", "💞", "💕", "💓", "💗"];
   for (let i = 0; i < numberOfHearts; i++) {
     const heart = document.createElement("div");
@@ -504,4 +504,5 @@ function highlightClaimedDays() {
     }
   });
 }
+
 
