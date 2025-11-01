@@ -366,22 +366,31 @@ html, body {
 }
 
 .golden-month {
-  background: linear-gradient(90deg, #ffd700, #fff5b0, #ffd700);
-  background-size: 200% 100%;
-  background-clip: text;              /* ✅ estándar */
-  -webkit-background-clip: text;      /* ✅ compatibilidad con WebKit */
+  font-weight: bold;
+  background: linear-gradient(
+    120deg,
+    #b8860b 0%,
+    #ffd700 20%,
+    #fff8dc 30%,
+    #ffd700 45%,
+    #b8860b 60%,
+    #ffd700 80%,
+    #b8860b 100%
+  );
+  background-size: 200% auto; /* 🔹 El truco para que se mueva */
   color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
-  text-shadow: 0 0 10px gold, 0 0 20px orange;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite; /* 🔹 Animación continua */
 }
 
+/* Animación del brillo */
 @keyframes shine {
   0% {
-    background-position: 200% 0;
+    background-position: 200% center;
   }
   100% {
-    background-position: -200% 0;
+    background-position: 0% center;
   }
 }
 
