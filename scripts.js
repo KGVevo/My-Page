@@ -26,33 +26,6 @@ const dayTexts = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 🔐 Palabra secreta personalizada
 const PASSWORD = "miamor"; 
 
@@ -138,46 +111,6 @@ document.addEventListener("click", (e) => {
     setTimeout(() => heart.remove(), 800);
   }
 });
-
-
-
-
-
-// 🔹 Solo mostramos el GIF y luego pasamos al contenido principal
-document.getElementById('startButton').addEventListener('click', () => {
-  const startScreen = document.getElementById('startScreen');
-  const introGif = document.getElementById('introGif');
-
-  startScreen.style.display = 'none';
-  introGif.style.display = 'flex';
-  introGif.style.zIndex = '31000';
-
-  setTimeout(() => introGif.classList.add('show'), 50);
-
-  // Ocultar el GIF tras unos segundos y habilitar la página
-  setTimeout(() => {
-    introGif.style.opacity = '0';
-    setTimeout(() => {
-      introGif.style.display = 'none';
-      introGif.style.zIndex = '-1';
-      introGif.style.pointerEvents = "none"; // 🔥 asegura que no bloquee los botones
-      document.body.style.overflow = 'auto';
-    }, 500);
-  }, 6000);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ------- CALENDARIO -------
@@ -503,6 +436,15 @@ setTimeout(() => {
     introGif.style.display = "none";
     introGif.style.zIndex = "-1";
     introGif.style.pointerEvents = "none";
+
+
+  // 🔓 Mostrar el contenido principal recién ahora
+  const mainContent = document.getElementById("mainContent");
+  mainContent.style.display = "block";
+  setTimeout(() => {
+    mainContent.style.opacity = "1";
+  }, 50);
+
 
     // 🌟 Mostrar botones con animación suave
     const musicBtn = document.getElementById("toggleMusic");
