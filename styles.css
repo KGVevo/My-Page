@@ -400,3 +400,118 @@ html, body {
   }
 }
 
+
+/* --- DÍA A PUNTO DE DESBLOQUEARSE --- */
+/* --- Día a punto de desbloquearse --- */
+.almost-available {
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+/* --- Efecto de brillo giratorio --- */
+/* --- Día a punto de desbloquearse --- */
+.almost-available {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* --- Bordes con brillo animado --- */
+/* --- Día a punto de desbloquearse --- */
+.almost-available {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* --- Bordes con brillo animado compatible --- */
+/* --- Día a punto de desbloquearse --- */
+.almost-available {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* --- Bordes con brillo animado principal --- */
+.almost-available::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 2px;
+  background: linear-gradient(120deg, #ff00ff, #ff66ff, #a100ff, #ff00ff);
+  background-size: 400% 400%;
+  animation: borderFlow 3s linear infinite;
+
+  /* Máscara para mostrar solo el borde */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* --- Destello blanco que pasa alrededor --- */
+.almost-available::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: linear-gradient(90deg, #ff20ff, white, #9a10fd, white, #ff2eff);
+  background-size: 400% 400%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: continuousGlow 20s linear infinite;
+  pointer-events: none;
+}
+
+/* --- Animación del flujo de color --- */
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Animación del destello blanco --- */
+@keyframes whiteShine {
+  0%, 90%, 100% { background-position: -200% 0; opacity: 0; }
+  40%, 60% { background-position: 200% 0; opacity: 0.5; }
+}
+
+@keyframes continuousGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+
+
+/* Día casi disponible → efecto de brillo girando alrededor */
+.almost-available {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+  animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 5px #ff9cff, 0 0 10px #e593ff, 0 0 15px #b87bff, 0 0 20px #ffb7ff;
+  }
+  50% {
+    box-shadow: 0 0 10px #e593ff, 0 0 20px #c080ff, 0 0 30px #ff9cff, 0 0 40px #ffb7ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #ff9cff, 0 0 10px #e593ff, 0 0 15px #b87bff, 0 0 20px #ffb7ff;
+  }
+}

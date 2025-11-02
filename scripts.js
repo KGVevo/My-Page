@@ -8,7 +8,7 @@ const dayTexts = {
 
   "2025-10-27":"Trabajando a full con esta pagina, estoy agotado, puro script aqui, miedo de que no ande, pipipipipipi",
   "2025-10-31":"  Alarma sonando...\n-Hoy desperte a las 7:10, la alarma no paraba de sonar, yo la apago como persona responsable que soy, pero he caido dormido, me despierto a las 7:58 por arte de magia, intente ver a que hora pasaba el colectivo pero la jodida aplicacion no queria andar, entonces sali apurado sin desayunar encaminado hacia la Uni, el colectivo se asomo a mi casa a las 8:20, iba a llegar muy tarde a la Uni\n-Despues de un largo viaje caigo a la Uni a las 8:57, al bajar veo a dos de mis compañeros, aparentemente no era el unico que llegaba tarde hoy, me alegre un poco la verdad, despues de unas horas 'intensas' de Estadistica, fui a tomar el receso de las 10:30, el receso termino a las 11 pero yo y mis compas nos quedamos unos minutos más, no teniamos prisa ya que era pura practica, volvemos al salon y me pongo a escribir...\n-A las 12:30 la profe toma asistencia, por cada alumno nombrado era un alumno que se largaba, muy pocos se quedan siempre hasta las 13:00, por no decir casi nadie, yo incluido me iba una vez mi nombre sea llamado, total, era practica, la podia hacer en casa, me dirijo a la parada y en poco tiempo llega mi colectivo el 63A, ya que es mas rapido que el 62\n-Llego a casa, justo unos 15 minutos antes que mi hermana, justo lo que no deseaba, porque el primero que llega es el que limpia las cochinadas del perro, queria safarme pero parece que no resulto, limpio la suciedad y justo llega mi hermana, sirvo la comida para los dos y a comer, mientras deleitamos la comida miramos algo en la tele, al terminar de comer me lave el cabello, porque me molestaba bastante la verdad, necesito cortarme, ya está bien largo, despues de una larga limpieza de pelo, me alisto para ir a buscar a mi hermano.\n-Voy caminando hasta Luro y me tomo el 11 que no tardo mucho en llegar, llego como a las 16:30, al no andar la sucia aplicación del colectivo fuimos a la parada y tomar el primero que llega, por suerte no paso mucho y llego el 12, en el colectivo una chica me dijo que le abriera la ventana, pero cuando me dijo eso me llamo por mi nombre, algo inuasual, tal vez fui yo y mi sordura.\n-Bajamos en la parada donde se baja mi mujer cada vez que viene a verme, hacemos la caminata hasta casa sin ningun problema, al entrar a casa hacia calor así que abri un poco las ventanas, luego de dejar mis cosas me puse a lavar los platos, no era mucha cosa asi que fue sencillo y poco tardado, una vez hecho eso le preparo unos stickers que me habia pedido mi mujer, una vez terminado se los mando, y veo una captura que me habia mandado Isma, resulta que la chica del colectivo que sabia mi nombre era la hermana de Isma, realmente no me lo podia creer, me reí del momento porque le habia mandado una foto donde salia yo de espaldas, y Isma dice 'Mi juan'.\n-Me pongo a hacer la merienda para mi y mis hermanos, y a merendar, luego me pongo a full a terminar está pagina que estas leyendo, así es, aca son las 21:19, bueno, como queda muy poco de dia supongo que no hay mas que contar.",
-  
+  "2025-11-01":"  12:45 De la tarde\n-Suena la alarma que habia puesto a esa hora, eran unas 7:45 horas de sueño, ya que me dormi a las 5:00 y no me queria levantar tan tarde, mientras desayuno unas galletas y mi mate-cocido me pongo a mirar algo para no aburrirme, en eso se hacen las 14:00, Mi mamá prepara el almuerzo y voy a comer, mientras comemos siempre miramos un capitulo de Bob esponja, para cuando termine el capitulo siempre todos ya terminamos de comer, yo limpio la mesa y me voy al cuarto.\n-Hablo con mi mujer un buen rato hasta las 16:30 más o menos, ya que ella se tenia que ir a bañar y yo a estudiar.\n-Prendo la pc para ponerme a full con el estudio ya que tenia todos los power point en la pc, estudio un rato hasta la hora de la merienda que es a las 18:00, por lo general tengo una alarma a las 17:55 para poner el agua, pero como hoy era sabado puse el agua un poco mas tarde.\n-El agua estaba hirviendo, buscaba mi taza y las de mis hermanos pero no las encontraba, le pregunte a mi hermana si sabia algo pero me comento que nuestra madre las habia tirado porque estaban un poco viejitas, a mi me enojo un poco la decision que tomo sin preguntarme, pero ni modo, procedi a robarle una de sus tazas, ya que eran mas grande que las que dejo para nosostros, para merendar habia unas galletas muy buenas, muy rico, mientras merendaba miraba al Rubius que estaba en directo, luego me puse a acomadar algo en la pagina, que seguro lo notaras al instante, es un detalle de los dias, despues jugue una horita y estudie un poquito más, para las 21:00 tenia que servir la comida ya que estaba todo hecho, lo unico que tal vez faltaba eran cortar unos tomates que eso lo hacia en un instante, el plato de está noche era nada más y nada menos que Pollo(alitas), arroz y tomate, rico, limpio la mesa y a escribir esto que estas leyendo, son las 22:47, en nada lo estaras leyendo, aqui me despido y nos vemos mañana\n   -Punto final.",
 
 
 
@@ -137,6 +137,7 @@ function renderCalendar() {
   for(let d=1; d<=lastDate; d++){
     const day = document.createElement("div");
     day.textContent = d;
+    day.dataset.day = d;
     day.addEventListener("click", () => {
       selectedDay = d;
       document.getElementById("popupTitle").textContent = `Día ${d}`;
@@ -306,10 +307,12 @@ document.getElementById("claimBtn").addEventListener("click", () => {
     document.getElementById("viewDayPopup").style.display = "flex";
     document.getElementById("dayPopup").style.display = "none";
 
+    // Esperar un poquito antes de volver a marcar (para no borrar las estrellas)
+    setTimeout(() => {
+      highlightClaimedDays();
+      checkMonthCompletion();
+    }, 100);
 
-    // Marcar día reclamado
-    highlightClaimedDays();
-    checkMonthCompletion();
 
 
     // ------- EXPLOSIÓN DE ESTRELLITAS -------
@@ -348,10 +351,23 @@ document.getElementById("claimBtn").addEventListener("click", () => {
 function checkMonthCompletion() {
   const allDays = document.querySelectorAll("#daysGrid div");
   const validDays = Array.from(allDays).filter(d => d.textContent.trim() !== "");
-  const claimedInMonth = validDays.filter(d => d.classList.contains("claimed")).length;
+  const claimedDays = JSON.parse(localStorage.getItem("claimedDays") || "[]");
+  const currentMonth = calendar.currentDate.getMonth();
+  const currentYear = calendar.currentDate.getFullYear();
   const monthTitle = document.getElementById("monthYear");
 
-  if (claimedInMonth === validDays.length && validDays.length > 0) {
+  // Contar cuántos días del mes actual están reclamados
+  let claimedCount = 0;
+  validDays.forEach(d => {
+    const dayNum = parseInt(d.textContent.trim());
+    const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(dayNum).padStart(2, "0")}`;
+    if (claimedDays.includes(dateKey)) {
+      claimedCount++;
+    }
+  });
+
+  // Si todos los días válidos del mes están reclamados → dorado
+  if (claimedCount === validDays.length && validDays.length > 0) {
     monthTitle.classList.add("golden-month");
   } else {
     monthTitle.classList.remove("golden-month");
@@ -465,21 +481,50 @@ setTimeout(() => {
 
 // ------- MARCAR DÍAS RECLAMADOS -------
 function highlightClaimedDays() {
+  const allDays = document.querySelectorAll("#daysGrid div");
   const claimedDays = JSON.parse(localStorage.getItem("claimedDays") || "[]");
-  const month = calendar.currentDate.getMonth();
-  const year = calendar.currentDate.getFullYear();
+  const now = getArgentinaTime();
+  const currentYear = calendar.currentDate.getFullYear();
+  const currentMonth = calendar.currentDate.getMonth();
 
-  document.querySelectorAll("#daysGrid div").forEach((el) => {
-    const day = el.textContent.trim();
-    const key = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-    
-    if (claimedDays.includes(key)) {
-      el.classList.add("claimed");
-      el.innerHTML = `${day} <span style="color: gold;">⭐</span>`;
+  allDays.forEach(d => {
+    // Mantener el número del día en un atributo dataset
+    let dayText = d.dataset.day;
+    if (!dayText) {
+      dayText = d.textContent.trim();
+      d.dataset.day = dayText;
+    }
+    if (!dayText) return;
+
+    const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(dayText).padStart(2, "0")}`;
+    const dayDate = new Date(`${dateKey}T23:00:00-03:00`);
+
+    // Limpiar estados previos
+    d.classList.remove("claimed", "almost-available");
+    const oldStar = d.querySelector(".star-icon");
+    if (oldStar) oldStar.remove();
+
+    // Si ya fue reclamado → mostrar estrella
+    if (claimedDays.includes(dateKey)) {
+      d.classList.add("claimed");
+
+      const star = document.createElement("span");
+      star.className = "star-icon";
+      star.textContent = "⭐";
+      star.style.fontSize = "20px";
+      star.style.marginLeft = "5px";
+      star.style.verticalAlign = "middle";
+      d.appendChild(star);
+
     } else {
-      el.classList.remove("claimed");
-      el.innerHTML = day;
+      // Si falta menos de 24 horas → efecto de destello rosa-violeta
+      const diff = dayDate - now;
+      if (diff > 0 && diff <= 24 * 60 * 60 * 1000) {
+        d.classList.add("almost-available");
+      }
     }
   });
 }
+
+
 
