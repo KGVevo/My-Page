@@ -11,7 +11,7 @@ const dayTexts = {
   "2025-11-01":"  12:45 De la tarde\n-Suena la alarma que habia puesto a esa hora, eran unas 7:45 horas de sueño, ya que me dormi a las 5:00 y no me queria levantar tan tarde, mientras desayuno unas galletas y mi mate-cocido me pongo a mirar algo para no aburrirme, en eso se hacen las 14:00, Mi mamá prepara el almuerzo y voy a comer, mientras comemos siempre miramos un capitulo de Bob esponja, para cuando termine el capitulo siempre todos ya terminamos de comer, yo limpio la mesa y me voy al cuarto.\n-Hablo con mi mujer un buen rato hasta las 16:30 más o menos, ya que ella se tenia que ir a bañar y yo a estudiar.\n-Prendo la pc para ponerme a full con el estudio ya que tenia todos los power point en la pc, estudio un rato hasta la hora de la merienda que es a las 18:00, por lo general tengo una alarma a las 17:55 para poner el agua, pero como hoy era sabado puse el agua un poco mas tarde.\n-El agua estaba hirviendo, buscaba mi taza y las de mis hermanos pero no las encontraba, le pregunte a mi hermana si sabia algo pero me comento que nuestra madre las habia tirado porque estaban un poco viejitas, a mi me enojo un poco la decision que tomo sin preguntarme, pero ni modo, procedi a robarle una de sus tazas, ya que eran mas grande que las que dejo para nosostros, para merendar habia unas galletas muy buenas, muy rico, mientras merendaba miraba al Rubius que estaba en directo, luego me puse a acomadar algo en la pagina, que seguro lo notaras al instante, es un detalle de los dias, despues jugue una horita y estudie un poquito más, para las 21:00 tenia que servir la comida ya que estaba todo hecho, lo unico que tal vez faltaba eran cortar unos tomates que eso lo hacia en un instante, el plato de está noche era nada más y nada menos que Pollo(alitas), arroz y tomate, rico, limpio la mesa y a escribir esto que estas leyendo, son las 22:47, en nada lo estaras leyendo, aqui me despido y nos vemos mañana\n   -Punto final.",
   "2025-11-02":"  13:16 Me lavente\n-Me desperte por la alarma que me había puesto a las 13:00 pero segui de largo, 15 minutos casi despues logro despertar completamente, a la hora que justo llegó mi mamá de la iglesia, con mi Mate cocido me como unas galletas secas, a las 14 me pongo con el cuaderno y a estudiar, la idea de hoy era estudiar todo el dia, al menos para estar preparado totalmente, despues de un poco de estudio era hora del almuerzo, mi comida favoria, una ensalada de arroz, huevo, tomate y pollo, riquisimo, lastima que era solo un plato, sino, comia hasta explotar, despues me distraje un poco en la pc pero despues me puse con el estudio de nuevo, el tiempo pasaba y a las 18:20 hora de merendar, mi mama para la merienda habia cocinado un bizcochuelo, estaba muy rico, pero tambien comí mucho unas galletas secas con queso, luego volvi al ordenador para seguir estudiando, igual me distraia mucho, pero logre entender muchas cosas, luego despues de unas horitas era la hora de cenar, comimos fideos con tuco y carne, tambien muy rico, limpio la mesa, le doy de comer al Chanchito y a seguir estudiando, ahora son las 22:36 y todavia me queda bastante practica, me voy a poner a full y que mañana me vaya espetacular, confio.\n\n   Por ultimo, Mi mujer es muy preciosa.",
   "2025-11-03":"  6:50...Sonó la alarma\n-El dia comenzaba tranquilo, ni tan cansado ni tan agotado, sabiendo que me dormi como a las 2 de la noche, desayuno rapidamente y alimento al Chanchito, yo confiado de que la aplicacion del colectivo andaba a las 7:40 reviso el 'Cuando llega' la aplicion para ver cuando llega el colectivo, pero lamentablemente no andaba, tocaba salir rapidamente rezando que el colectivo no haya pasado aun, estuve esperando como 25 minutos, no sé si el colectivo se habia atrasado o simplemente lo habia perdido, pero me lo tome como a las 8:05, lo que daba un proximado para llegar tarde unos cuantos minutos, fueron como 10 minutos, no tanto, pero me senté y me dieron el parcial, cuando leí las preguntas y los verdaderos y falsos me queria matar porque esos ejercicios eran exactamente los mismos que los del modelo del parcial, me cago totalmente porque justo esos no los habia hecho, si tan solo lo hubiera repasado, si tan solo los hubiera hecho, entonces intente hacerlos con lo que sabia, pero no fue suficiente para aprobar, lamentablemente, pero ahora hay que prepararse para el parcial de matematicas, no podemos desaprobarlo, al menos para no defraudar a la profe la cual me regalo nota para que yo no recursara.\n-Saliendo de la Uni acorde con mi mujer en vernos cerca de su Universidad ya que ella tenia que esperar hasta las 15:00 para escuchar como exponen, llegue como a las 10 para verla, tan encantadora como siempre me estaba esperando, me habia guardado unas empanadas, es la mejor, la amo muchisimo, fuimos de paseo por ahí, visitamos librerias, tiendas de peluches, tienda de cosas para mujeres y mi mujer compro tambien cositas, despues fuimos a la plaza colon a sentarnos en un banco hasta las 14 ya que era la hora que yo me tenia que ir, Compartimos las empanadas, Alimentamos pajaros, muy pocos pero alimentados, jugamos al UNO, claramente gane todas yo, una vez llego la hora de partir, volvimos a la Uni y de ahí cada uno por su lado.\n-Fui a la parada del 62, por suerte no se tardo tanto, pero estaba llenito, no petado, pero si llenito, depues de un largo vieje a casa llego sin problemas, me acomodo, y me caliento lo habia de comer, nada mas y nada menos que unos buenos fideos con tuco de ayer, yo les agregue queso, muy rico, despues de comer me tire un rato en la cama ya que estaba cansadito, dormi unos 15 minutos, despues lave los platos y dormi otra siestita que seguia cansado, hasta las 18, para hacer la merienda, 18:40 mas o menos merendamos, la verdad ganas de estudiar tenia pocas, entoces decidi que mañana me quiero explotar estudiando aprovechando que no tengo Uni, bueno mucho desvelo y poco más, a las 22:00 cenamos unas salchichas con Pure, riquisimas, limpie la mesa, cerre la ventana y a escribir esto, ahora mismo son las 23:13, siempre se actualiza a las 23hs pero hoy me atrase un poquito porque terminamos tarde de comer, sorry, pero aqui estamos con un dia mas de lo que hice en el dia, ahora si me despido y nos vemos mañana.\n    Chauuuuu!!",
-
+  "2025-11-04":"    9:13...\n-El sueño fue más fuerte que yo, me habia puesto la alarma a las 8:30 pero yo recien la escuche a las 9:15, super raro, como hice para no despertame hasta 40 minutos despues de que sonara la alarma, la apague y se pospuso, pero al rato siguio sonando y sonando y sonando así durante un largo rato hasta que a las 10:20 yo la apague totalmente, pero segui de largo hasta las 12:17, que fue cuando llegaron mis hermanos.\n-Mientras mis hermanos almorzaban yo estaba en el cuarto desayunando y programando la nueva actualizacion de la pagina, despues dime si te gusto o no, sino no te gusta tirame ideas de alguna opcion mejor, literalmente puedo hacer de TODO, es cuestion de codigo, al rato me servi para almorzar y alimentarme mientras disfrutaba de algunos videos, me puse el agua para lavar los platos, me distraje un poco y tarde mas de lo que queria, al rato la vecina trajo la factura del mes, digamos que subio casi 100k, mi mamá se va a agarra de la cabaza cuando se lo diga, bueno, despues anduve con Chanchito un rato, prendí la pc y puse el agua para la merienda, me hago unos panes para mi y mi hermano, y merendamos, despues de terminar de merendar juego un ratito y despues a estudiar Estadistica, un rato más tarde era la hora de cenar, de rico comimos unas papas horneadas muy ricas con tomate y medallon, limpie la mesa y despues a estudiar un poco más, mañana veo a mi mujer YIPIIIIIIIIIIIIIIIIIIIIIIIIIIIII!!!.\n     Fin.",
 
 
 
@@ -21,7 +21,6 @@ const dayTexts = {
   "2026-10-1": "LOL FUNCIONA OMG",
 
 };
-
 
 
 
@@ -64,14 +63,14 @@ passwordButton.addEventListener("click", () => {
   }
 });
 
+
+
 // Permitir presionar Enter
 passwordInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") passwordButton.click();
 });
-// Permitir presionar Enter
-passwordInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") passwordButton.click();
-});
+
+
 
 
 // ----------------- LLUVIA DE FLORES -----------------
@@ -121,7 +120,6 @@ const calendar = {
 
 let selectedDay = null;
 const dayMenu = document.getElementById("dayMenu");
-
 function renderCalendar() {
   const month = calendar.currentDate.getMonth();
   const year = calendar.currentDate.getFullYear();
@@ -132,40 +130,44 @@ function renderCalendar() {
   const daysGrid = document.getElementById("daysGrid");
   daysGrid.innerHTML = "";
 
-  for(let i=0; i<firstDay; i++) daysGrid.appendChild(document.createElement("div"));
+  // Recuperar colores guardados
+  const dayColors = JSON.parse(localStorage.getItem("dayColors") || "{}");
 
-  for(let d=1; d<=lastDate; d++){
+  // Espacios vacíos antes del primer día
+  for (let i = 0; i < firstDay; i++) daysGrid.appendChild(document.createElement("div"));
+
+  for (let d = 1; d <= lastDate; d++) {
     const day = document.createElement("div");
     day.textContent = d;
     day.dataset.day = d;
+
+    // Aplicar color guardado si existe
+    const dayKey = `${year}-${String(month + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+    if (dayColors[dayKey]) {
+      day.style.backgroundColor = dayColors[dayKey];
+    }
+
+    // Evento al hacer click
     day.addEventListener("click", () => {
       selectedDay = d;
       document.getElementById("popupTitle").textContent = `Día ${d}`;
       document.getElementById("dayPopup").style.display = "flex";
-      startClaimCountdown(); // Inicia el contador al abrir
-      
+      startClaimCountdown();
 
       // Cambiar texto del botón si ya fue reclamado
-      const year = calendar.currentDate.getFullYear();
-      const month = String(calendar.currentDate.getMonth() + 1).padStart(2, "0");
-      const dayKey = `${year}-${month}-${String(d).padStart(2, "0")}`;
       const claimedDays = JSON.parse(localStorage.getItem("claimedDays") || "[]");
       const claimBtn = document.getElementById("claimBtn");
-
-
       claimBtn.textContent = claimedDays.includes(dayKey) ? "Ver" : "Reclamar";
 
-
+      // Si fue reclamado → abrir popup con selector de color
 
     });
+
     daysGrid.appendChild(day);
   }
 
-  // 🔹 Marcar días reclamados al renderizar
   highlightClaimedDays();
   checkMonthCompletion();
-
-
 }
 
 document.getElementById("prevMonth").addEventListener("click", () => {
@@ -348,6 +350,10 @@ document.getElementById("claimBtn").addEventListener("click", () => {
 });
 
 
+
+
+
+
 function checkMonthCompletion() {
   const allDays = document.querySelectorAll("#daysGrid div");
   const validDays = Array.from(allDays).filter(d => d.textContent.trim() !== "");
@@ -417,15 +423,14 @@ toggleMusicBtn.addEventListener("click", () => {
 
 
 
+// ---------- INICIO / BOTÓN COMENZAR ----------
 const startButton = document.getElementById("startButton");
 const startScreen = document.getElementById("startScreen");
 const introGif = document.getElementById("introGif");
 
-// 🔹 Asegurarse de que el GIF esté oculto al inicio
+// Asegurarse de que el GIF esté oculto al inicio
 window.addEventListener("load", () => {
   introGif.style.display = "none";
-
-  // Asegurar que los botones funcionen correctamente al iniciar
   document.getElementById("toggleCalendar").disabled = false;
   document.getElementById("toggleMusic").disabled = false;
 });
@@ -434,73 +439,116 @@ startButton.addEventListener("click", () => {
   // Ocultar pantalla de inicio
   startScreen.style.display = "none";
 
-  // Mostrar el GIF justo después de presionar "Comenzar"
+  // Mostrar el GIF
   introGif.style.display = "flex";
   introGif.style.zIndex = "31000";
   setTimeout(() => introGif.classList.add("show"), 50);
-
 
   // Reproducir música
   bgMusic.play().catch(() => {
     console.log("Autoplay bloqueado, el usuario interactuó");
   });
 
-  // 🔹 Ocultar el GIF después de unos segundos
-setTimeout(() => {
-  introGif.style.opacity = "0";
+  // Luego de 6 segundos, ocultar el GIF y mostrar el contenido principal
   setTimeout(() => {
-    introGif.style.display = "none";
-    introGif.style.zIndex = "-1";
-    introGif.style.pointerEvents = "none";
+    introGif.style.opacity = "0";
+    setTimeout(() => {
+      introGif.style.display = "none";
+      introGif.style.pointerEvents = "none";
 
+      const mainContent = document.getElementById("mainContent");
+      mainContent.style.display = "block";
+      mainContent.style.opacity = "1";
 
-  // 🔓 Mostrar el contenido principal recién ahora
-  const mainContent = document.getElementById("mainContent");
-  mainContent.style.display = "block";
-  setTimeout(() => {
-    mainContent.style.opacity = "1";
-  }, 50);
-
-
-    // 🌟 Mostrar botones con animación suave
-    const musicBtn = document.getElementById("toggleMusic");
-    const daysBtn = document.getElementById("toggleCalendar");
-
-    [musicBtn, daysBtn].forEach(btn => {
-      btn.style.opacity = "0";
-      btn.style.display = "block";
-      btn.style.transition = "opacity 1s ease";
-      setTimeout(() => btn.style.opacity = "1", 100);
-    });
-
-  }, 500); // coincide con el fade-out
-}, 6000);   
+      // Mostrar los botones con fade
+      ["toggleMusic", "toggleCalendar"].forEach(id => {
+        const btn = document.getElementById(id);
+        btn.style.opacity = "0";
+        btn.style.display = "block";
+        btn.style.transition = "opacity 1s ease";
+        setTimeout(() => btn.style.opacity = "1", 100);
+      });
+    }, 600);
+  }, 6000);
 });
 
 
 
-// ------- MARCAR DÍAS RECLAMADOS -------
+
+
+
+//--------------SISTEMA DE COLORES---------------------------------------------------------
+// 🎨 Sistema de colores personalizados
+const colorPicker = document.getElementById("colorPicker");
+const saveColorBtn = document.getElementById("saveColorBtn");
+
+// Cargar colores guardados
+let dayColors = JSON.parse(localStorage.getItem("dayColors") || "{}");
+
+// Guardar color elegido
+saveColorBtn.addEventListener("click", () => {
+  if (!selectedDay) return;
+
+  const year = calendar.currentDate.getFullYear();
+  const month = String(calendar.currentDate.getMonth() + 1).padStart(2, "0");
+  const day = String(selectedDay).padStart(2, "0");
+  const dateKey = `${year}-${month}-${day}`;
+  const chosenColor = colorPicker.value;
+
+  // Guardar color
+  dayColors[dateKey] = chosenColor;
+  localStorage.setItem("dayColors", JSON.stringify(dayColors));
+
+  // Aplicar color directamente al calendario
+  const allDays = document.querySelectorAll("#daysGrid div");
+  allDays.forEach(d => {
+    const dKey = `${year}-${month}-${String(d.dataset.day).padStart(2, "0")}`;
+    if (dKey === dateKey) {
+      d.style.backgroundColor = chosenColor;
+    }
+  });
+});
+
+// Aplicar colores guardados cuando se renderiza el calendario
+function applySavedColors() {
+  const allDays = document.querySelectorAll("#daysGrid div");
+  const currentYear = calendar.currentDate.getFullYear();
+  const currentMonth = calendar.currentDate.getMonth() + 1;
+
+  allDays.forEach(div => {
+    const day = parseInt(div.dataset.day);
+    const dateKey = `${currentYear}-${String(currentMonth).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    if (dayColors[dateKey]) {
+      div.style.backgroundColor = dayColors[dateKey];
+    }
+  });
+}
+
+
+
+
+
 function highlightClaimedDays() {
   const allDays = document.querySelectorAll("#daysGrid div");
+  if (!allDays.length) return; // Evita errores si el calendario aún no se renderizó
+  
   const claimedDays = JSON.parse(localStorage.getItem("claimedDays") || "[]");
   const now = getArgentinaTime();
   const currentYear = calendar.currentDate.getFullYear();
   const currentMonth = calendar.currentDate.getMonth();
 
   allDays.forEach(d => {
-    // Mantener el número del día en un atributo dataset
-    let dayText = d.dataset.day;
-    if (!dayText) {
-      dayText = d.textContent.trim();
-      d.dataset.day = dayText;
-    }
-    if (!dayText) return;
+    const dayText = d.dataset.day || d.textContent.trim();
+    if (!dayText || isNaN(dayText)) return; // ← Evita celdas vacías (los huecos del mes)
+
+    d.dataset.day = dayText;
 
     const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(dayText).padStart(2, "0")}`;
     const dayDate = new Date(`${dateKey}T23:00:00-03:00`);
 
     // Limpiar estados previos
     d.classList.remove("claimed", "almost-available");
+
     const oldStar = d.querySelector(".star-icon");
     if (oldStar) oldStar.remove();
 
@@ -517,14 +565,21 @@ function highlightClaimedDays() {
       d.appendChild(star);
 
     } else {
-      // Si falta menos de 24 horas → efecto de destello rosa-violeta
+      // Si falta menos de 24 horas → aplicar efecto visual
       const diff = dayDate - now;
       if (diff > 0 && diff <= 24 * 60 * 60 * 1000) {
         d.classList.add("almost-available");
       }
     }
   });
+
+  // 🔹 Aplicar los colores personalizados guardados
+  const dayColors = JSON.parse(localStorage.getItem("dayColors") || "{}");
+  Object.entries(dayColors).forEach(([key, color]) => {
+    const [year, month, day] = key.split("-").map(Number);
+    if (year === currentYear && month - 1 === currentMonth) {
+      const target = Array.from(allDays).find(div => Number(div.dataset.day) === day);
+      if (target) target.style.backgroundColor = color;
+    }
+  });
 }
-
-
-
