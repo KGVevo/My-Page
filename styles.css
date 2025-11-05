@@ -515,3 +515,38 @@ html, body {
     box-shadow: 0 0 5px #ff9cff, 0 0 10px #e593ff, 0 0 15px #b87bff, 0 0 20px #ffb7ff;
   }
 }
+
+
+/* 🔹 Popup del día visto (color personalizado) */
+#viewDayPopup {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(191, 168, 225, 0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Debajo del startScreen (30000) y del password (32000) */
+  pointer-events: none; /* No bloquea clics cuando está oculto */
+}
+
+#viewDayPopup[style*="display: flex"] {
+  pointer-events: all; /* Solo clics cuando está visible */
+}
+
+/* Opcional: animación suave de entrada */
+.dayPopup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: #5a0048;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

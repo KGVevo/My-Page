@@ -138,27 +138,48 @@
   </div>
 
   <!-- ---------- POPUP PARA EL DÍA SELECCIONADO ---------- -->
-  <div id="dayPopup" class="dayPopup">
-    <div class="dayPopup-content">
-      <h2 id="popupTitle"></h2>
-      <p id="popupText">Que nos espera hoy...</p>
-      <div style="display: flex; gap: 10px; justify-content: center;">
-        <button id="claimBtn">Reclamar</button>
-        <button id="closePopup">Cerrar</button>
-      </div>
+<!-- ---------- POPUP PARA EL DÍA SELECCIONADO ---------- -->
+<div id="dayPopup" class="dayPopup">
+  <div class="dayPopup-content">
+    <h2 id="popupTitle"></h2>
+    <p id="popupText">Que nos espera hoy...</p>
+
+    <!-- 🎨 Selector de color dentro del popup -->
+    <div id="colorPickerContainer" style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:10px;">
+      <label for="colorPicker">Puedes cambiar el color:</label>
+      <input type="color" id="colorPicker" value="#ffffff" style="width:60px; height:40px; border:none; cursor:pointer; border-radius:6px;">
+      <button id="saveColorBtn" style="padding:6px 12px; border:none; border-radius:6px; background-color:#ff69b4; color:white; cursor:pointer;">
+        Guardar color
+      </button>
+    </div>
+
+    <div style="display: flex; gap: 10px; justify-content: center; margin-top:15px;">
+      <button id="claimBtn">Reclamar</button>
+      <button id="closePopup">Cerrar</button>
     </div>
   </div>
+</div>
+
+
 
   <!-- ---------- POPUP PARA LEER TEXTO DEL DÍA ---------- -->
-  <div id="viewDayPopup" class="dayPopup">
-    <div class="dayPopup-content">
-      <h2 id="viewDayTitle"></h2>
-      <p id="viewDayText"></p>
-      <div style="display:flex; justify-content:center; margin-top:10px;">
-        <button id="closeViewDay">Cerrar</button>
-      </div>
+<div id="viewDayPopup" class="dayPopup">
+  <div class="dayPopup-content">
+    <h2 id="viewDayTitle"></h2>
+    <p id="viewDayText"></p>
+
+
+    <div style="display:flex; justify-content:center; margin-top:15px;">
+      <button id="closeViewDay">Cerrar</button>
     </div>
   </div>
+</div>
+
+
+
+
+
+
 
   <!-- Botón para reproducir / pausar música -->
   <button id="toggleMusic" style="
