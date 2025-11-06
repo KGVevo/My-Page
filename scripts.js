@@ -12,7 +12,7 @@ const dayTexts = {
   "2025-11-02":"  13:16 Me lavente\n-Me desperte por la alarma que me había puesto a las 13:00 pero segui de largo, 15 minutos casi despues logro despertar completamente, a la hora que justo llegó mi mamá de la iglesia, con mi Mate cocido me como unas galletas secas, a las 14 me pongo con el cuaderno y a estudiar, la idea de hoy era estudiar todo el dia, al menos para estar preparado totalmente, despues de un poco de estudio era hora del almuerzo, mi comida favoria, una ensalada de arroz, huevo, tomate y pollo, riquisimo, lastima que era solo un plato, sino, comia hasta explotar, despues me distraje un poco en la pc pero despues me puse con el estudio de nuevo, el tiempo pasaba y a las 18:20 hora de merendar, mi mama para la merienda habia cocinado un bizcochuelo, estaba muy rico, pero tambien comí mucho unas galletas secas con queso, luego volvi al ordenador para seguir estudiando, igual me distraia mucho, pero logre entender muchas cosas, luego despues de unas horitas era la hora de cenar, comimos fideos con tuco y carne, tambien muy rico, limpio la mesa, le doy de comer al Chanchito y a seguir estudiando, ahora son las 22:36 y todavia me queda bastante practica, me voy a poner a full y que mañana me vaya espetacular, confio.\n\n   Por ultimo, Mi mujer es muy preciosa.",
   "2025-11-03":"  6:50...Sonó la alarma\n-El dia comenzaba tranquilo, ni tan cansado ni tan agotado, sabiendo que me dormi como a las 2 de la noche, desayuno rapidamente y alimento al Chanchito, yo confiado de que la aplicacion del colectivo andaba a las 7:40 reviso el 'Cuando llega' la aplicion para ver cuando llega el colectivo, pero lamentablemente no andaba, tocaba salir rapidamente rezando que el colectivo no haya pasado aun, estuve esperando como 25 minutos, no sé si el colectivo se habia atrasado o simplemente lo habia perdido, pero me lo tome como a las 8:05, lo que daba un proximado para llegar tarde unos cuantos minutos, fueron como 10 minutos, no tanto, pero me senté y me dieron el parcial, cuando leí las preguntas y los verdaderos y falsos me queria matar porque esos ejercicios eran exactamente los mismos que los del modelo del parcial, me cago totalmente porque justo esos no los habia hecho, si tan solo lo hubiera repasado, si tan solo los hubiera hecho, entonces intente hacerlos con lo que sabia, pero no fue suficiente para aprobar, lamentablemente, pero ahora hay que prepararse para el parcial de matematicas, no podemos desaprobarlo, al menos para no defraudar a la profe la cual me regalo nota para que yo no recursara.\n-Saliendo de la Uni acorde con mi mujer en vernos cerca de su Universidad ya que ella tenia que esperar hasta las 15:00 para escuchar como exponen, llegue como a las 10 para verla, tan encantadora como siempre me estaba esperando, me habia guardado unas empanadas, es la mejor, la amo muchisimo, fuimos de paseo por ahí, visitamos librerias, tiendas de peluches, tienda de cosas para mujeres y mi mujer compro tambien cositas, despues fuimos a la plaza colon a sentarnos en un banco hasta las 14 ya que era la hora que yo me tenia que ir, Compartimos las empanadas, Alimentamos pajaros, muy pocos pero alimentados, jugamos al UNO, claramente gane todas yo, una vez llego la hora de partir, volvimos a la Uni y de ahí cada uno por su lado.\n-Fui a la parada del 62, por suerte no se tardo tanto, pero estaba llenito, no petado, pero si llenito, depues de un largo vieje a casa llego sin problemas, me acomodo, y me caliento lo habia de comer, nada mas y nada menos que unos buenos fideos con tuco de ayer, yo les agregue queso, muy rico, despues de comer me tire un rato en la cama ya que estaba cansadito, dormi unos 15 minutos, despues lave los platos y dormi otra siestita que seguia cansado, hasta las 18, para hacer la merienda, 18:40 mas o menos merendamos, la verdad ganas de estudiar tenia pocas, entoces decidi que mañana me quiero explotar estudiando aprovechando que no tengo Uni, bueno mucho desvelo y poco más, a las 22:00 cenamos unas salchichas con Pure, riquisimas, limpie la mesa, cerre la ventana y a escribir esto, ahora mismo son las 23:13, siempre se actualiza a las 23hs pero hoy me atrase un poquito porque terminamos tarde de comer, sorry, pero aqui estamos con un dia mas de lo que hice en el dia, ahora si me despido y nos vemos mañana.\n    Chauuuuu!!",
   "2025-11-04":"    9:13...\n-El sueño fue más fuerte que yo, me habia puesto la alarma a las 8:30 pero yo recien la escuche a las 9:15, super raro, como hice para no despertame hasta 40 minutos despues de que sonara la alarma, la apague y se pospuso, pero al rato siguio sonando y sonando y sonando así durante un largo rato hasta que a las 10:20 yo la apague totalmente, pero segui de largo hasta las 12:17, que fue cuando llegaron mis hermanos.\n-Mientras mis hermanos almorzaban yo estaba en el cuarto desayunando y programando la nueva actualizacion de la pagina, despues dime si te gusto o no, sino no te gusta tirame ideas de alguna opcion mejor, literalmente puedo hacer de TODO, es cuestion de codigo, al rato me servi para almorzar y alimentarme mientras disfrutaba de algunos videos, me puse el agua para lavar los platos, me distraje un poco y tarde mas de lo que queria, al rato la vecina trajo la factura del mes, digamos que subio casi 100k, mi mamá se va a agarra de la cabaza cuando se lo diga, bueno, despues anduve con Chanchito un rato, prendí la pc y puse el agua para la merienda, me hago unos panes para mi y mi hermano, y merendamos, despues de terminar de merendar juego un ratito y despues a estudiar Estadistica, un rato más tarde era la hora de cenar, de rico comimos unas papas horneadas muy ricas con tomate y medallon, limpie la mesa y despues a estudiar un poco más, mañana veo a mi mujer YIPIIIIIIIIIIIIIIIIIIIIIIIIIIIII!!!.\n     Fin.",
-
+  "2025-11-05":"    7:30 de la Mañana\n-Me despierto un poco cansado pero la alarma que es más insoportable me desperto totalmente, me levanto y le hablo a mi mujer, ya que hoy nos ibamos a ver, pero primero ella tiene que ir a la Uni, mientras tanto yo, desayuno y ordeno dentro de lo posible la casa para cuando ella venga y recibirla con mucho amor, a las 9:07 Sali para tomarme el colectivo, llegue justo a la hora que habiamos acordado, 9:30, pero ella no estaba esperando, pensé que si lo estaria porque dijo que iba a salir antes pero resulta que no, al final se quedo hasta las 9:30 grabamdo la clase, despues de eso vamos a la parada a esperar el 62, se tardo unos 10 minutos, no mucho pero llegamos a casita como a las 9:58, mientras ella saludaba a los animalitos yo me acomodaba, hoy de especial le intente enseñar a jugar al truco, creo que sigue sin entender, pero no duramos mucho, otro dia con mas tiempo aprendemos bien, despues estuvimos acostados mientras escuchabamos musica un buen rato, el tiempo se nos paso volando y ella ya se tenia que ir lamentablemente, nos alistamos y chau, la acompaño hasta la parada como de costumbre, se tomo el 11 para volver ya que debia hacer unas compras antes.\n-Yo me dirijo a mi casa a continuar con mi rutina, llego a casa y me tiro en la cama, sin darme cuenta me duermo hasta las 14, cuando me acoste eran las 13, me dormi una horita mas o menos, me levante y me puse a cocinar que mi hermana todavia no habia almorzado, almorzamos arroz con medallones mientras mirabamos a Robleis, Lavo las platos y me desvelo en la pc un rato, me sentia un poco fatigado, va, al momento de escribir esto me sigo sintiendo fatigado, cuando se hacen las 18 mi mama pone el agua para merendar y yo despues termino de hacer las meriendas, eso de las 18:45 merendamos, luego a estudiar, estudio, estudio, estudio y estudio, hasta la hora de cenar que fue a a las 21:30, de rico comimos medio huevo, una ensalada y unas hamburguesas, muy rico, despues limpie la mesa y poco más, a seguir estudiando.\n           Es una pena terrible...",
 
 
 
@@ -183,26 +183,27 @@ document.getElementById("nextMonth").addEventListener("click", () => {
 const toggleCalendarBtn = document.getElementById("toggleCalendar");
 const cal = document.getElementById("calendar");
 
+
 toggleCalendarBtn.addEventListener("click", () => {
   const isHidden = cal.style.display === "none" || cal.style.display === "";
 
   if (isHidden) {
-    // 🔹 Siempre volver al mes actual antes de mostrar
     calendar.currentDate = new Date(); 
     renderCalendar();
-
     cal.style.display = "block";
     toggleCalendarBtn.style.visibility = "hidden"; 
   } else {
     cal.style.display = "none";
     toggleCalendarBtn.style.visibility = "visible";
   }
-
-  document.getElementById("closeCalendar").addEventListener("click", () => {
-    cal.style.display = "none";
-    toggleCalendarBtn.style.visibility = "visible";
-  });    
 });
+
+// 🟢 mover fuera del evento para evitar duplicaciones
+document.getElementById("closeCalendar").addEventListener("click", () => {
+  cal.style.display = "none";
+  toggleCalendarBtn.style.visibility = "visible";
+});
+
 
 renderCalendar();
 
@@ -386,6 +387,7 @@ function checkMonthCompletion() {
 
 const bgMusic = document.getElementById("bgMusic");
 const toggleMusicBtn = document.getElementById("toggleMusic");
+bgMusic.volume = 0.5;
 
 
   

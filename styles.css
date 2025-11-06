@@ -360,8 +360,9 @@ body {
 
 html, body {
   height: 100%;
-  overflow: hidden; /* 🔒 bloquea cualquier scroll */
+  overflow-x: hidden; /* solo bloquea horizontal */
 }
+
 
 
 #toggleMusic,
@@ -416,23 +417,12 @@ html, body {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
+  border: 2px solid transparent;
+  animation: borderGlow 3s linear infinite;
 }
 
-/* --- Bordes con brillo animado --- */
-/* --- Día a punto de desbloquearse --- */
-.almost-available {
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-}
 
-/* --- Bordes con brillo animado compatible --- */
-/* --- Día a punto de desbloquearse --- */
-.almost-available {
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-}
+
 
 /* --- Bordes con brillo animado principal --- */
 .almost-available::before {
