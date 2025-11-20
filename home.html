@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Oficial - Contenido Privado</title>
+    <title>Inicio</title>
     
     <style>
         /* Estilos base */
@@ -14,71 +14,101 @@
             min-height: 100vh;
             margin: 0;
             flex-direction: column;
-            font-family: 'Inter', sans-serif;
-            background-color: #d0b0d3;
-            color: #333;
-            position: relative; /* Necesario para el botón absoluto */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+            background-color: #F3E5F5; /* Lavanda muy claro */
+            color: #4A148C; /* Púrpura oscuro para texto principal */
+            position: relative;
+            line-height: 1.6;
         }
 
         /* Botón Diario - Superior Izquierda */
         .nav-btn {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: #6c298b;
+            top: 25px;
+            left: 25px;
+            padding: 12px 25px;
+            background-color: #fa68ff; /* Púrpura vibrante */
             color: white;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            transition: background-color 0.3s;
+            border-radius: 20px; /* Bordes más redondeados */
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.2s;
+            letter-spacing: 0.5px;
         }
         
         .nav-btn:hover {
-            background-color: #55495c;
+            background-color: #8E24AA; /* Tono más oscuro al pasar el ratón */
+            transform: translateY(-2px); /* Efecto sutil de elevación */
         }
 
         /* Contenedor de Contenido Privado */
         .private-content {
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            border-radius: 16px; /* Bordes suaves */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
             background-color: #ffffff;
             width: 90%;
-            max-width: 500px;
+            max-width: 450px;
             text-align: center;
+            border-left: 5px solid #E1BEE7; /* Detalle de color */
         }
         
         .message {
-            font-size: 24px;
-            margin-bottom: 20px; 
-            color: #3b82f6; 
-            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 15px; 
+            color: #673AB7; /* Púrpura de encabezado */
+            font-weight: 800;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
         }
 
+        /* Estilos para párrafos de texto */
+        .text-info {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #795548; /* Marrón suave para contraste */
+        }
+        
+        .highlight {
+            font-weight: 700;
+            color: #4A148C;
+        }
+
+        .text-secondary {
+            color: #9C27B0; /* Púrpura secundario */
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+
         .logout-button {
-            padding: 12px 24px;
-            font-size: 18px;
+            padding: 12px 28px;
+            font-size: 17px;
             font-weight: bold;
             color: #ffffff;
-            background-color: #ef4444;
+            background-color: #ff0000; /* Naranja/rojo cálido para la acción */
             border: none;
-            border-radius: 8px;
+            border-radius: 25px; 
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 112, 67, 0.4);
+            transition: background-color 0.3s ease, transform 0.2s;
             margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .logout-button:hover {
-            background-color: #dc2626;
+            background-color: #850000; /* Tono más oscuro al pasar el ratón */
+            transform: scale(1.05);
         }
 
         #loadingMessage {
             font-size: 18px;
-            color: #82a5e0;
-            font-weight: bold;
+            color: #7B1FA2; /* Púrpura de carga */
+            font-weight: 600;
+            padding: 15px;
+            background-color: #E1BEE7;
+            border-radius: 8px;
         }
 
         .hidden {
@@ -87,23 +117,18 @@
     </style>
 </head>
 <body>
-    
-    <!-- Botón de Navegación -->
-    <a href="diario.html" class="nav-btn">📖 Diario</a>
 
-    <!-- Mensaje de carga inicial -->
+    <a href="diario.html" class="nav-btn">Diario</a>
+
     <div id="loadingMessage">Verificando estado de autenticación...</div>
 
-    <!-- Contenido Privado -->
     <div id="privateContent" class="private-content hidden">
-        <h2 class="message">¡Bienvenido al Inicio Oficial!</h2>
+        <h2 class="message">Bienvenida a la Pagina</h2>
         
-        <p class="text-lg mb-4">
+        <p class="text-info">
             Has iniciado sesión exitosamente como: 
-            <span id="userEmailDisplay" class="font-bold text-gray-700" style="font-weight: bold;"></span>
+            <span id="userEmailDisplay" class="highlight"></span>
         </p>
-        
-        <p class="text-gray-500 mb-6" style="color: #6b7280;">Este es el contenido privado de la aplicación.</p>
         
         <button id="logoutBtn" class="logout-button">Cerrar Sesión</button>
     </div>

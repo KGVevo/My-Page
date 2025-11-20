@@ -87,6 +87,8 @@ function setupPrivatePage() {
     });
 }
 
+
+
 // Router Simple
 document.addEventListener('DOMContentLoaded', () => {
     const file = currentPath.split('/').pop().toLowerCase();
@@ -97,3 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setupAuthPage();
     }
 });
+
+
+//CONTROL DE AUDIO
+const audioPlayer = document.querySelector('audio');
+audioPlayer.volume = 0.5; // Establece el volumen a 50%
+
