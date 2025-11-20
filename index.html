@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Esencial para la adaptabilidad en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Mínimo</title>
+    <!-- Enlace al archivo CSS "styles.css" (si existe) -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        /* Estilo para centrar el contenido vertical y horizontalmente */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+            margin: 0;
+            flex-direction: column; /* Permite centrar el contenido verticalmente */
+            font-family: sans-serif; /* Fuente básica para el texto */
+            color: #333; /* Color de texto oscuro */
+            background-image: url('fondo.jpg'); /* pon el nombre de tu imagen */
+            background-size: cover;             /* ocupa toda la pantalla */
+            background-position: center;        /* centrado */
+            background-repeat: no-repeat;       /* no se repite */
+        }
+
+
+
+        .auth-container, .private-content {
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            background-color: #d395ce;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+
+        
+        .message {
+            font-size: 24px;
+            /* Espacio aumentado entre el texto y el input */
+            margin-bottom: 40px; 
+            color: #6c298b; /* Un color morado oscuro para el texto */
+            font-weight: 700;
+        }
+
+        /* Nuevo estilo para el campo de entrada de contraseña */
+
+
+        .password-input {
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #6c298b;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+
+        .password-input:focus {
+            border-color: #f581ff;
+            box-shadow: 0 0 8px rgba(108, 41, 139, 0.5);
+        }
+
+
+        .confirm-button {
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #6c298b;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-top: 10px; 
+        }
+
+
+        .confirm-button:hover {
+            background-color: #55495c; /*COLOR-MOUSE ENCIMA DEL CONFIRMAR*/
+        }
+
+        #authMessage {
+            margin-top: 15px;
+            font-weight: bold;
+            min-height: 20px;
+        }
+        
+        /* Clase para ocultar elementos */
+        .hidden {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Contenedor de Autenticación (Formulario) -->
+    <div id="authContainer" class="auth-container">
+        <h2 class="message">Inicia Sesión o Regístrate</h2>
+        
+        <input type="email" id="emailInput" class="password-input" placeholder="Escribe tu email">
+        
+        <input type="password" id="passwordInput" class="password-input" placeholder="Escribe la contraseña">
+
+        <p id="authMessage" style="color: #6c298b;"></p>
+        
+        <button id="confirmBtn" class="confirm-button">Confirmar / Registrar</button>
+    </div>
+
+    
+    <!-- Contenido Privado (Inicialmente Oculto) -->
+    <div id="privateContent" class="private-content hidden">
+        <h2 class="message" style="color: #3b82f6;">¡Acceso Exitoso!</h2>
+        <p class="text-lg mb-4">Bienvenido(a), <span id="userEmailDisplay" class="font-bold text-gray-700"></span>.</p>
+        <p class="text-gray-500 mb-6">Esta es la sección privada de la aplicación.</p>
+        <button id="logoutBtn" class="confirm-button" style="background-color: #ef4444;">Cerrar Sesión</button>
+    </div>
+
+    <!-- Enlace al archivo de script: Cambiado a 'scripts.js' y añadido type="module" -->
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>

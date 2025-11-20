@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Oficial - Contenido Privado</title>
+    
+    <style>
+        /* Estilos base */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            background-color: #d0b0d3;
+            color: #333;
+            position: relative; /* Necesario para el botón absoluto */
+        }
+
+        /* Botón Diario - Superior Izquierda */
+        .nav-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #6c298b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background-color: #55495c;
+        }
+
+        /* Contenedor de Contenido Privado */
+        .private-content {
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px; 
+            color: #3b82f6; 
+            font-weight: 700;
+        }
+
+        .logout-button {
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #ef4444;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .logout-button:hover {
+            background-color: #dc2626;
+        }
+
+        #loadingMessage {
+            font-size: 18px;
+            color: #82a5e0;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Botón de Navegación -->
+    <a href="diario.html" class="nav-btn">📖 Diario</a>
+
+    <!-- Mensaje de carga inicial -->
+    <div id="loadingMessage">Verificando estado de autenticación...</div>
+
+    <!-- Contenido Privado -->
+    <div id="privateContent" class="private-content hidden">
+        <h2 class="message">¡Bienvenido al Inicio Oficial!</h2>
+        
+        <p class="text-lg mb-4">
+            Has iniciado sesión exitosamente como: 
+            <span id="userEmailDisplay" class="font-bold text-gray-700" style="font-weight: bold;"></span>
+        </p>
+        
+        <p class="text-gray-500 mb-6" style="color: #6b7280;">Este es el contenido privado de la aplicación.</p>
+        
+        <button id="logoutBtn" class="logout-button">Cerrar Sesión</button>
+    </div>
+
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Diario</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Notificación Personalizada -->
+    <div id="notification-banner" role="alert"></div>
+
+    <!-- Mensaje de carga --><div id="loadingMessage">Cargando...</div>
+
+    <!-- Contenedor de Contenido Privado (Se muestra después de la carga/auth) --><div id="privateContent" class="diario-content hidden">
+        
+        <!-- Título --><h1 class="main-title">Bienvenida al Diario</h1>
+        
+        <!-- Muestra el ID del usuario para compartir -->
+        <p style="text-align: center; margin-bottom: 20px;">
+            Tu ID para compartir: <code id="currentUserIdDisplay" style="font-size: 0.8rem; background: #ffe0e6; padding: 4px 8px; border-radius: 5px; cursor: pointer;" title="Haz clic para copiar el ID">Cargando...</code>
+        </p>
+
+
+        <!-- Grupo de Botones --><div class="button-group">
+            <button id="viewDiarioBtn" class="nav-btn view-btn">Ver Mi Diario</button>
+            <button id="viewSharedDiarioBtn" class="nav-btn share-btn">Ver Diario Compartido</button>
+            <a href="home.html" class="nav-btn">Volver al Inicio</a>
+        </div>
+    </div>
+
+    <!-- Modal del Calendario (Uso personal o compartido) --><div id="calendarModal" class="modal-overlay hidden">
+        <div class="calendar-modal">
+            <button class="close-btn" id="closeCalendarBtn">×</button>
+            <h2 id="calendarTitle" class="calendar-header" style="justify-content: center; margin-bottom: 15px; font-size: 1.8rem;">
+                Calendario
+            </h2>
+            <div class="calendar-header">
+                <button class="calendar-nav-btn" id="prevMonthBtn">«</button>
+                <span id="currentMonthYear">Mes Año</span>
+                <button class="calendar-nav-btn" id="nextMonthBtn">»</button>
+            </div>
+            <div class="calendar-grid">
+                <div class="day-name">Lun</div>
+                <div class="day-name">Mar</div>
+                <div class="day-name">Mié</div>
+                <div class="day-name">Jue</div>
+                <div class="day-name">Vie</div>
+                <div class="day-name">Sáb</div>
+                <div class="day-name">Dom</div>
+            </div>
+            <div id="daysGrid" class="calendar-grid">
+                <!-- Los días se insertan aquí por JS --></div>
+        </div>
+    </div>
+
+    <!-- Modal de Acción Diaria (Para RECLAMAR / EDITAR / ELIMINAR - Solo para Mi Diario) -->
+    <div id="actionModal" class="modal-overlay hidden">
+        <div class="calendar-modal action-modal">
+            <button class="close-btn" id="closeActionModalBtn">×</button>
+            <h2 class="calendar-header" style="justify-content: center; margin-bottom: 5px; font-size: 1.3rem;">
+                Día seleccionado: <br>
+                <span id="selectedDateDisplay" style="color: #ff91a4; font-size: 1.5rem;"></span>
+            </h2>
+            
+            <p id="claimPrompt" style="margin-top: 10px; font-weight: bold;">Escribe tu entrada del diario:</p>
+            <textarea id="entryTextarea" class="entry-textarea" placeholder="¿Qué pasó hoy?"></textarea>
+
+            <!-- Contenedor principal de botones para Reclamar/Guardar/Ver/Eliminar -->
+            <div class="button-group-action" style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Botón Reclamar/Editar/Guardar -->
+                <button id="claimViewBtn" class="nav-btn" data-date="" style="background-color: #ff91a4;"></button>
+                
+                <!-- Contenedor para botones de entrada ya reclamada (CORRECCIÓN: Se añade el ID 'claimedButtonsGroup') -->
+                <div id="claimedButtonsGroup" class="hidden" style="display: flex; flex-direction: column; gap: 10px; margin-top: -10px;">
+                    <!-- Botones Ver y Editar (Añadidos) -->
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <button id="viewEntryBtn" class="nav-btn" style="flex-grow: 1;">Ver Entrada</button>
+                        <button id="editEntryBtn" class="nav-btn edit-btn" style="flex-grow: 1; background-color: #6ee7b7;">Editar</button>
+                    </div>
+                    <!-- Botón de Eliminar (Ya existía, se mueve al grupo) -->
+                    <button id="deleteBtn" class="nav-btn" style="background-color: #ef4444;">Eliminar Entrada</button>
+                </div>
+
+            </div>
+            
+            <!-- Campo oculto para almacenar el ID del reclamo/entrada actual -->
+            <input type="hidden" id="currentClaimId" value="">
+        </div>
+    </div>
+    
+    <!-- Modal de Visualización (Para VER) -->
+    <div id="viewModal" class="modal-overlay hidden">
+        <div class="calendar-modal view-modal">
+            <button class="close-btn" id="closeViewModalBtn">×</button>
+            <h2 class="calendar-header" style="justify-content: center; margin-bottom: 5px; font-size: 1.3rem;">
+                <span id="viewUserName" style="color: #a80000;"></span>:<br>
+                <span id="viewDateDisplay" style="color: #a80000; font-size: 1.5rem;"></span>
+            </h2>
+            <div id="entryTextView">
+                <!-- El texto del diario se inserta aquí por JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- NUEVO: Modal para ingresar el ID de usuario compartido -->
+    <div id="shareModal" class="modal-overlay hidden">
+        <div class="calendar-modal action-modal">
+            <button class="close-btn" id="closeShareModalBtn">×</button>
+            <h2 class="calendar-header" style="justify-content: center; margin-bottom: 5px; font-size: 1.3rem;">
+                Ver Diario de Otro Usuario
+            </h2>
+            <p style="margin-bottom: 10px;">Ingresa el ID del usuario con quien quieres compartir:</p>
+            <input type="text" id="sharedUserIdInput" class="user-id-input" placeholder="Ej: 00000000-0000-0000-0000-000000000000">
+            <button id="loadSharedDiarioBtn" class="nav-btn share-btn">Cargar Diario</button>
+        </div>
+    </div>
+
+
+    <!-- Script de lógica de autenticación y Supabase -->
+    <script type="module" src="scripts.js"></script>
+
+    <!-- Script para la animación de flores, corazones y lógica del diario -->
+    <script type="module" src="flower_script.js"></script>
+</body>
+</html>

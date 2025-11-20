@@ -1,0 +1,377 @@
+body {
+    /* CÓDIGO DE COLOR DE FONDO DIRECTO*/
+    background-color: #e2b2ee; 
+}
+
+
+/* Estilos CSS para el efecto de flores */
+.falling-flower {
+    position: absolute;
+    top: -50px; /* Empieza fuera de la vista */
+    color: #ff69b4; /* Color rosa */
+    user-select: none;
+    z-index: 0; 
+    opacity: 0.8;
+    /* Modificamos la animación para incluir la rotación */
+    animation: fall linear forwards, rotate-flower linear forwards;
+}
+@keyframes fall {
+    to {
+        transform: translateY(105vh) var(--final-rotation, rotate(0deg)); /* Incorpora la rotación final */
+        opacity: 0;
+    }
+}
+/* Nueva keyframe para la rotación */
+@keyframes rotate-flower {
+    from {
+        transform: translateY(-50px) rotate(var(--random-rotation-start));
+    }
+    to {
+        transform: translateY(105vh) rotate(var(--random-rotation-end));
+    }
+}
+/* --- ESTILOS PARA EL ESTALLIDO DE CORAZONES --- */
+.burst-heart {
+    position: absolute;
+    pointer-events: none; /* Ignorar clics para que no interfieran */
+    user-select: none;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Animación de 0.8s */
+    z-index: 5; /* Asegura que esté por encima de las flores */
+    transform: translate(0, 0) rotate(0deg); /* Estado inicial */
+}
+
+/* Estilos principales */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Inter', sans-serif; /* Fuente más juguetona */
+    background-color: #f0dcef; /* Rosa muy claro */
+    color: #5d3f6a; /* Morado suave */
+    overflow-x: hidden; 
+    position: relative; 
+}
+/* NUEVO: Previene el desplazamiento del contenido principal cuando el modal está activo */
+body.modal-open {
+    overflow: hidden; 
+}
+/* Contenedor principal de la página privada */
+.diario-content {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; 
+    z-index: 1; 
+    background-color: transparent; 
+}
+/* Título Principal */
+.main-title {
+    font-size: 2.8rem; /* Un poco más grande */
+    color: #88399e; /* Morado vibrante */
+    margin: 20px 0 40px 0;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Sombra suave para "pop" */
+}
+
+/* Agrupar botones para espaciado y centrado */
+.button-group {
+    display: flex;
+    flex-direction: column; /* Apilados verticalmente */
+    gap: 15px; /* Espacio entre botones */
+    margin-top: auto; /* Empuja el grupo hacia el final del flex container */
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 300px;
+    align-items: center;
+}
+
+/* Estilo base para botones y enlaces de navegación */
+.nav-btn {
+    padding: 12px 24px;
+    background-color: #ff91a4; /* Rosa pastel */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px; /* Más redondeado */
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra más pronunciada */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; 
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.nav-btn:hover:not(:disabled) { 
+    background-color: #ff1f1f; /* Rosa más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto "lift" */
+}
+.nav-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Estilo específico para el botón Ver Diario */
+.view-btn {
+     background-color: #8445e9; /* Azul celeste pastel */
+}
+.view-btn:hover {
+     background-color: #87c7ff; /* Azul más oscuro */
+}
+
+/* NUEVO: Estilo para el botón Compartir */
+.share-btn {
+     background-color: #5ef5f5; /* Amarillo soleado */
+}
+.share-btn:hover {
+     background-color: #fbbf24; /* Amarillo más oscuro */
+}
+/* Ajuste de tamaño para móviles */
+@media (max-width: 640px) {
+    .main-title {
+        font-size: 1.75rem;
+    }
+}
+#loadingMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #82a5e0;
+    font-weight: bold;
+    z-index: 10;
+}
+.hidden { display: none !important; }
+
+/* --- MODAL Y CALENDARIO (KAWAII) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 228, 230, 0.8); /* Fondo semitransparente rosa claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.calendar-modal {
+    background-color: #ffffff;
+    padding: 30px; /* Más espacio */
+    border-radius: 20px; /* Más redondeado */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 5px rgba(255, 182, 193, 0.5); /* Sombra suave y borde rosa */
+    width: calc(100% - 40px); 
+    max-width: 420px; /* Un poco más ancho */
+    position: relative;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.4s ease; /* Animación "bouncy" */
+    border: 2px solid #ffb6c1; /* Borde rosa más definido */
+    max-height: 80vh; /* Para prevenir desbordamiento en móviles */
+    overflow-y: auto;
+}
+.calendar-modal.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Estilo específico para el modal de acción */
+.action-modal {
+    max-width: 450px; /* Un poco más grande para el textarea */
+    text-align: center;
+}
+/* Estilo específico para el modal de visualización */
+.view-modal {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Estilo para el textarea */
+.entry-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    resize: vertical;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #fff0f5; /* Color de fondo suave */
+}
+
+.entry-textarea:not([readonly]):focus {
+    border-color: #ff91a4;
+    box-shadow: 0 0 8px rgba(255, 145, 164, 0.5);
+    background-color: #ffffff; /* Blanco al editar */
+}
+
+.entry-textarea[readonly] {
+    cursor: default;
+    background-color: #fff0f5; 
+    color: #5d3f6a;
+    border-style: dashed; /* Para indicar que no es editable */
+}
+
+/* Estilo para el texto visualizado */
+#entryTextView {
+    white-space: pre-wrap; /* Mantiene saltos de línea y espacios */
+    text-align: left;
+    padding: 15px;
+    background-color: #fff0f5;
+    border-radius: 10px;
+    border: 1px solid #ffb6c1;
+    margin-top: 15px;
+    min-height: 50px;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+/* NUEVO: Estilo para la entrada de ID de usuario */
+.user-id-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #fcd34d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; /* Más espacio */
+    font-size: 1.6rem; /* Título de mes más grande */
+    font-weight: bold;
+    color: #ee88e5; /* Lavanda pastel */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -20px;
+}
+.calendar-nav-btn {
+    background: #f7e7ff; /* Fondo muy claro para botones */
+    border: none;
+    font-size: 1.8rem; /* Flechas más grandes */
+    cursor: pointer;
+    color: #a78bfa; /* Morado claro */
+    padding: 8px 15px;
+    border-radius: 15px; /* Botones más redondeados */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.calendar-nav-btn:hover {
+    background-color: #e9d5ff; /* Color de hover más oscuro */
+    transform: scale(1.05);
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px; /* Más espacio entre días */
+    text-align: center;
+}
+.day-name, .day-cell {
+    padding: 10px 0; /* Más padding */
+    border-radius: 10px; /* Días más redondeados */
+    font-size: 1.1rem; /* Texto de días más grande */
+}
+.day-name {
+    font-weight: bold;
+    color: #fda4af; /* Rosa cálido para nombres de días */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.day-cell {
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
+    font-weight: 600;
+    color: #8b5cf6; /* Morado para días normales */
+    background-color: #fff0f5; /* Fondo rosa muy claro para días */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Sombra interna suave */
+}
+.day-cell.empty {
+    background-color: transparent;
+    cursor: default;
+    box-shadow: none;
+}
+.day-cell:hover:not(.empty) {
+    background-color: #fed7aa; /* Melocotón claro al pasar el ratón */
+    transform: scale(1.1); /* Efecto pop */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.day-cell.today {
+    background-color: #ffb6c1; /* Rosa claro para el día de hoy */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.6);
+    transform: scale(1.08);
+    border: 2px solid #ff80a0;
+}
+.day-cell.claimed {
+    background-color: #c084fc; /* Morado para días reclamados */
+    color: white;
+    font-weight: bold;
+}
+.day-cell.other-claimed {
+     background-color: #fcd34d; /* Amarillo para días de otro usuario */
+     color: #5d3f6a;
+     font-weight: bold;
+}
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem; /* Más grande */
+    cursor: pointer;
+    color: #ef4444; /* Rojo suave */
+    transition: transform 0.2s ease;
+}
+.close-btn:hover {
+    transform: rotate(90deg) scale(1.1);
+    color: #dc2626;
+}
+/* --- NOTIFICACIÓN PERSONALIZADA --- */
+#notification-banner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background-color: #4CAF50; /* Verde por defecto */
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-weight: bold;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s;
+}
+#notification-banner.show {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+}
+#notification-banner.error {
+    background-color: #F44336; /* Rojo para errores */
+}
