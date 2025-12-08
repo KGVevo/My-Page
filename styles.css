@@ -40,7 +40,7 @@ body {
     transform: translate(0, 0) rotate(0deg); /* Estado inicial */
 }
 
-/* Estilos principales */
+/* FONDO DEL DIARIO.HTML */
 body {
     display: flex;
     flex-direction: column;
@@ -48,8 +48,8 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Comic Sans MS', 'Inter', sans-serif; /* Fuente más juguetona */
-    background-color: #f0dcef; /* Rosa muy claro */
-    color: #5d3f6a; /* Morado suave */
+    background-color: #528cd8c2; /* Rosa muy claro */
+    color: #000000; /* letras del ID */
     overflow-x: hidden; 
     position: relative; 
 }
@@ -78,15 +78,17 @@ body.modal-open {
     z-index: 1; 
     background-color: transparent; 
 }
+
+
 /* Título Principal */
 .main-title {
     font-size: 2.8rem; /* Un poco más grande */
-    color: #88399e; /* Morado vibrante */
+    color: #0bb8be; /* Morado vibrante */
     margin: 20px 0 40px 0;
     font-weight: 800;
     text-align: center;
     width: 100%;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Sombra suave para "pop" */
+    text-shadow: 2px 2px 4px rgba(179, 26, 128, 0.7); /* Sombra suave para "pop" */
 }
 
 /* Agrupar botones para espaciado y centrado */
@@ -169,7 +171,7 @@ body.modal-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 228, 230, 0.8); /* Fondo semitransparente rosa claro */
+    background: rgba(118, 108, 211, 0.363); /* Fondo semitransparente rosa claro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,7 +273,7 @@ body.modal-open {
     margin-bottom: 25px; /* Más espacio */
     font-size: 1.6rem; /* Título de mes más grande */
     font-weight: bold;
-    color: #ee88e5; /* Lavanda pastel */
+    color: #88b7ee; /* Lavanda pastel */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     position: relative;
     top: -20px;
@@ -304,7 +306,7 @@ body.modal-open {
 }
 .day-name {
     font-weight: bold;
-    color: #fda4af; /* Rosa cálido para nombres de días */
+    color: #745ddb; /* Rosa cálido para nombres de días */
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -312,7 +314,7 @@ body.modal-open {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease, color 0.2s ease;
     font-weight: 600;
-    color: #8b5cf6; /* Morado para días normales */
+    color: #0ac0e0; /* Morado para días normales */
     background-color: #fff0f5; /* Fondo rosa muy claro para días */
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Sombra interna suave */
 }
@@ -322,13 +324,13 @@ body.modal-open {
     box-shadow: none;
 }
 .day-cell:hover:not(.empty) {
-    background-color: #fed7aa; /* Melocotón claro al pasar el ratón */
+    background-color: #371399; /* Melocotón claro al pasar el ratón */
     transform: scale(1.1); /* Efecto pop */
     color: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 .day-cell.today {
-    background-color: #ffb6c1; /* Rosa claro para el día de hoy */
+    background-color: #36c8db; /* Rosa claro para el día de hoy */
     color: white;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(255, 182, 193, 0.6);
@@ -336,7 +338,7 @@ body.modal-open {
     border: 2px solid #ff80a0;
 }
 .day-cell.claimed {
-    background-color: #c084fc; /* Morado para días reclamados */
+    background-color: #3032c4; /* Morado para días reclamados */
     color: white;
     font-weight: bold;
 }
@@ -431,4 +433,64 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* ================================================= */
+/* 0. Estilos Base del BODY (Mantenemos tu configuración) */
+/* ================================================= */
+body {
+    overflow: hidden; 
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* ======================================= */
+/* 1. Estilos Base de AMBOS Videos (Ocultos) */
+/* ======================================= */
+#video-desktop, #video-mobile {
+    display: none; /* Ocultamos ambos por defecto */
+    
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    object-fit: cover; 
+}
+
+/* ============================================== */
+/* 2. Estilos para PC (Ancho > 768px) */
+/* ============================================== */
+@media (min-width: 769px) {
+    #video-desktop {
+        display: block; /* Muestra el video de PC */
+    }
+    /* Aseguramos que el fondo del body esté limpio para PC */
+    body {
+        background-image: none;
+    }
+}
+
+/* ============================================== */
+/* 3. Estilos para Móvil (Ancho <= 768px) */
+/* ============================================== */
+@media (max-width: 768px) {
+    #video-mobile {
+        display: block; /* Muestra el video de Móvil */
+    }
+    
+    /* Ocultamos el video de PC por si acaso */
+    #video-desktop {
+        display: none;
+    }
+    
+    /* Si deseas seguir usando la imagen estática como fallback, la dejas aquí */
+    /* body {
+        background-image: url('videoframe_7798.png'); 
+        background-position: center center;
+        background-size: cover;
+    } */
 }
