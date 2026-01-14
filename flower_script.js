@@ -114,7 +114,7 @@ supabase.auth.onAuthStateChange((event, session) => {
 function createFallingFlower() {
     const flower = document.createElement("div");
     flower.classList.add("falling-flower");
-    const flowers = ["❄️", "🎄", "🎇", "✨", "🎁", "⛄"]; 
+    const flowers = ["🌸", "🌺", "🌼", "💮", "🌻", "🔸"]; 
     flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
     
     flower.style.left = Math.random() * 100 + "vw";
@@ -133,7 +133,7 @@ setInterval(createFallingFlower, 200);
 
 document.addEventListener("click", (e) => {
     const numberOfHearts = 3;
-    const heartTypes = ["🎆", "🎇", "✨", "🎆", "🎇", "✨", "🎆"];
+    const heartTypes = ["💖", "❤️", "💘", "💞", "💕", "💓", "💗"];
     for (let i = 0; i < numberOfHearts; i++) {
         const heart = document.createElement("div");
         heart.className = "burst-heart";
