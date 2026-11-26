@@ -5,134 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     
-    <style>
-        /* Estilos base */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
-            background-color: #F3E5F5; /* Lavanda muy claro */
-            color: #4A148C; /* Púrpura oscuro para texto principal */
-            position: relative;
-            line-height: 1.6;
-        }
-
-        /* Botón Diario - Superior Izquierda */
-        .nav-btn {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            padding: 12px 25px;
-            background-color: #fa68ff; /* Púrpura vibrante */
-            color: white;
-            text-decoration: none;
-            border-radius: 20px; /* Bordes más redondeados */
-            font-weight: 600;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s, transform 0.2s;
-            letter-spacing: 0.5px;
-        }
-        
-        .nav-btn:hover {
-            background-color: #8E24AA; /* Tono más oscuro al pasar el ratón */
-            transform: translateY(-2px); /* Efecto sutil de elevación */
-        }
-
-        /* Contenedor de Contenido Privado */
-        .private-content {
-            padding: 40px;
-            border-radius: 16px; /* Bordes suaves */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-            background-color: #ffffff;
-            width: 90%;
-            max-width: 450px;
-            text-align: center;
-            border-left: 5px solid #E1BEE7; /* Detalle de color */
-        }
-        
-        .message {
-            font-size: 28px;
-            margin-bottom: 15px; 
-            color: #673AB7; /* Púrpura de encabezado */
-            font-weight: 800;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
-        }
-
-        /* Estilos para párrafos de texto */
-        .text-info {
-            font-size: 16px;
-            margin-bottom: 12px;
-            color: #795548; /* Marrón suave para contraste */
-        }
-        
-        .highlight {
-            font-weight: 700;
-            color: #4A148C;
-        }
-
-        .text-secondary {
-            color: #9C27B0; /* Púrpura secundario */
-            font-style: italic;
-            margin-bottom: 25px;
-        }
-
-
-        .logout-button {
-            padding: 12px 28px;
-            font-size: 17px;
-            font-weight: bold;
-            color: #ffffff;
-            background-color: #ff0000; /* Naranja/rojo cálido para la acción */
-            border: none;
-            border-radius: 25px; 
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(255, 112, 67, 0.4);
-            transition: background-color 0.3s ease, transform 0.2s;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .logout-button:hover {
-            background-color: #850000; /* Tono más oscuro al pasar el ratón */
-            transform: scale(1.05);
-        }
-
-        #loadingMessage {
-            font-size: 18px;
-            color: #7B1FA2; /* Púrpura de carga */
-            font-weight: 600;
-            padding: 15px;
-            background-color: #E1BEE7;
-            border-radius: 8px;
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <a href="diario.html" class="nav-btn">Diario</a>
+    <audio loop autoplay>
+        <source src="music_home.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 
-    <div id="loadingMessage">Verificando estado de autenticación...</div>
+
+    
+    <div id="loadingMessage">Cargando...</div>
 
     <div id="privateContent" class="private-content hidden">
-        <h2 class="message">Bienvenida a la Pagina</h2>
+        <h2 class="message">Nuestro rincón</h2>
         
         <p class="text-info">
-            Has iniciado sesión exitosamente como: 
+            Sesión iniciada como 
             <span id="userEmailDisplay" class="highlight"></span>
         </p>
         
+        <section class="counters" aria-label="Tiempo juntos">
+            <div class="counter-total">
+                <p class="counter-label">Llevamos juntos</p>
+                <div class="counter-units">
+                    <div><span id="cYears">0</span><small>años</small></div>
+                    <div><span id="cMonths">0</span><small>meses</small></div>
+                    <div><span id="cDays">0</span><small>días</small></div>
+                </div>
+            </div>
+            <div class="counter-month">
+                <p class="counter-label">Faltan para nuestro próximo mes</p>
+                <div class="counter-units counter-countdown">
+                    <div><span id="cHours">0</span><small>horas</small></div>
+                    <div><span id="cMin">00</span><small>minutos</small></div>
+                    <div><span id="cSec">00</span><small>segundos</small></div>
+                </div>
+                <div class="counter-bar"><i id="cBar"></i></div>
+                <p id="cNote" class="counter-note"></p>
+            </div>
+        </section>
+        <a href="diario.html" class="nav-btn view-btn">Abrir nuestro diario</a>
         <button id="logoutBtn" class="logout-button">Cerrar Sesión</button>
     </div>
 
     <script type="module" src="scripts.js"></script>
+    <script src="counter.js" defer></script>
 </body>
 </html>

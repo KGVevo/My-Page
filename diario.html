@@ -27,11 +27,11 @@
 
     <!-- Contenedor de Contenido Privado (Se muestra después de la carga/auth) --><div id="privateContent" class="diario-content hidden">
         
-        <!-- Título --><h1 class="main-title">Bienvenida al Diario</h1>
+        <!-- Título --><h1 class="main-title">Nuestro diario</h1>
         
         <!-- Muestra el ID del usuario para compartir -->
-        <p style="text-align: center; margin-bottom: 20px;">
-            Tu ID para compartir: <code id="currentUserIdDisplay" style="font-size: 0.8rem; background: #ffe0e6; padding: 4px 8px; border-radius: 5px; cursor: pointer;" title="Haz clic para copiar el ID">Cargando...</code>
+        <p style="text-align:center;margin:0 0 4px;color:#a9a1d6;font-size:.9rem">
+            Tu ID para compartir: <code id="currentUserIdDisplay" title="Haz clic para copiar el ID">Cargando...</code>
         </p>
 
 
@@ -45,7 +45,7 @@
     <!-- Modal del Calendario (Uso personal o compartido) --><div id="calendarModal" class="modal-overlay hidden">
         <div class="calendar-modal">
             <button class="close-btn" id="closeCalendarBtn">×</button>
-            <h2 id="calendarTitle" class="calendar-header" style="justify-content: center; margin-bottom: 15px; font-size: 1.8rem;">
+            <h2 id="calendarTitle" class="calendar-header">
                 Calendario
             </h2>
             <div class="calendar-header">
@@ -71,9 +71,9 @@
     <div id="actionModal" class="modal-overlay hidden">
         <div class="calendar-modal action-modal">
             <button class="close-btn" id="closeActionModalBtn">×</button>
-            <h2 class="calendar-header" style="justify-content: center; margin-bottom: 5px; font-size: 1.3rem;">
+            <h2 class="calendar-header">
                 Día seleccionado: <br>
-                <span id="selectedDateDisplay" style="color: #ff91a4; font-size: 1.5rem;"></span>
+                <span id="selectedDateDisplay"></span>
             </h2>
             
             <p id="claimPrompt" style="margin-top: 10px; font-weight: bold;">Escribe tu entrada del diario:</p>
@@ -82,17 +82,17 @@
             <!-- Contenedor principal de botones para Reclamar/Guardar/Ver/Eliminar -->
             <div class="button-group-action" style="display: flex; flex-direction: column; gap: 20px;">
                 <!-- Botón Reclamar/Editar/Guardar -->
-                <button id="claimViewBtn" class="nav-btn" data-date="" style="background-color: #ff91a4;"></button>
+                <button id="claimViewBtn" class="nav-btn" data-date=""></button>
                 
                 <!-- Contenedor para botones de entrada ya reclamada (CORRECCIÓN: Se añade el ID 'claimedButtonsGroup') -->
                 <div id="claimedButtonsGroup" class="hidden" style="display: flex; flex-direction: column; gap: 10px; margin-top: -10px;">
                     <!-- Botones Ver y Editar (Añadidos) -->
                     <div style="display: flex; gap: 10px; justify-content: center;">
                         <button id="viewEntryBtn" class="nav-btn" style="flex-grow: 1;">Ver Entrada</button>
-                        <button id="editEntryBtn" class="nav-btn edit-btn" style="flex-grow: 1; background-color: #6ee7b7;">Editar</button>
+                        <button id="editEntryBtn" class="nav-btn edit-btn" style="flex-grow: 1;">Editar</button>
                     </div>
                     <!-- Botón de Eliminar (Ya existía, se mueve al grupo) -->
-                    <button id="deleteBtn" class="nav-btn" style="background-color: #ef4444;">Eliminar Entrada</button>
+                    <button id="deleteBtn" class="nav-btn">Eliminar Entrada</button>
                 </div>
 
             </div>
@@ -106,9 +106,9 @@
     <div id="viewModal" class="modal-overlay hidden">
         <div class="calendar-modal view-modal">
             <button class="close-btn" id="closeViewModalBtn">×</button>
-            <h2 class="calendar-header" style="justify-content: center; margin-bottom: 5px; font-size: 1.3rem;">
-                <span id="viewUserName" style="color: #a80000;"></span>:<br>
-                <span id="viewDateDisplay" style="color: #a80000; font-size: 1.5rem;"></span>
+            <h2 class="calendar-header">
+                <span id="viewUserName"></span>:<br>
+                <span id="viewDateDisplay"></span>
             </h2>
             <div id="entryTextView">
                 <!-- El texto del diario se inserta aquí por JS -->
@@ -120,7 +120,7 @@
     <div id="shareModal" class="modal-overlay hidden">
         <div class="calendar-modal action-modal">
             <button class="close-btn" id="closeShareModalBtn">×</button>
-            <h2 class="calendar-header" style="justify-content: center; margin-bottom: 5px; font-size: 1.3rem;">
+            <h2 class="calendar-header">
                 Ver Diario de Otro Usuario
             </h2>
             <p style="margin-bottom: 10px;">Ingresa el ID del usuario con quien quieres compartir:</p>

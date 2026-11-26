@@ -17,31 +17,51 @@ function setupAuthPage() {
     const emailInput = document.getElementById('emailInput');
     const passwordInput = document.getElementById('passwordInput');
     const confirmBtn = document.getElementById('confirmBtn');
+    const signupBtn = document.getElementById('signupBtn');
     const resetBtn = document.getElementById('resetBtn');
     const authMessage = document.getElementById('authMessage');
 
-    async function handleAuth(event) {
-        event.preventDefault();
+    function readCredentials() {
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
-
         if (!email || !password) {
             authMessage.textContent = 'Email y contraseña son obligatorios.';
-            return;
+            return null;
         }
+        return { email, password };
+    }
 
-        let { data, error } = await supabase.auth.signInWithPassword({ email, password });
-        
-        if (error && error.message.includes('Invalid login credentials')) {
-            ({ data, error } = await supabase.auth.signUp({ email, password }));
+    async function handleLogin(event) {
+        event.preventDefault();
+        const creds = readCredentials();
+        if (!creds) return;
+
+        const { data, error } = await supabase.auth.signInWithPassword(creds);
+
+        if (error) {
+            authMessage.textContent = error.message.includes('Invalid login credentials')
+                ? 'Email o contraseña incorrectos.'
+                : `Error: ${error.message}`;
+        } else if (data.session) {
+            window.location.href = 'home.html';
         }
+    }
+
+    async function handleSignUp(event) {
+        event.preventDefault();
+        const creds = readCredentials();
+        if (!creds) return;
+
+        const { data, error } = await supabase.auth.signUp(creds);
 
         if (error) {
             authMessage.textContent = `Error: ${error.message}`;
+        } else if (data.user && data.user.identities && data.user.identities.length === 0) {
+            authMessage.textContent = 'Ese email ya tiene una cuenta. Probá con "Entrar".';
         } else if (data.session) {
             window.location.href = 'home.html';
-        } else if (data.user) {
-            authMessage.textContent = 'Registro exitoso. Verifica tu email.';
+        } else {
+            authMessage.textContent = 'Cuenta creada. Revisá tu email para confirmarla.';
         }
     }
 
@@ -57,7 +77,8 @@ function setupAuthPage() {
         authMessage.textContent = error ? `Error: ${error.message}` : 'Correo enviado. Revisa tu bandeja.';
     }
 
-    if (confirmBtn) confirmBtn.addEventListener('click', handleAuth);
+    if (confirmBtn) confirmBtn.addEventListener('click', handleLogin);
+    if (signupBtn) signupBtn.addEventListener('click', handleSignUp);
     if (resetBtn) resetBtn.addEventListener('click', handleResetRequest);
 }
 

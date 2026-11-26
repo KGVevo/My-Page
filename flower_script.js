@@ -114,22 +114,22 @@ supabase.auth.onAuthStateChange((event, session) => {
 function createFallingFlower() {
     const flower = document.createElement("div");
     flower.classList.add("falling-flower");
-    const flowers = ["🌸", "🌺", "🌼", "💮", "🌻", "🔸"]; 
+    const flowers = ["✨", "⭐", "💫", "🌙", "💜", "🌸"]; 
     flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
     
     flower.style.left = Math.random() * 100 + "vw";
     flower.style.fontSize = 10 + Math.random() * 14 + "px";
-    flower.style.animationDuration = (2 + Math.random() * 3) + "s";
+    flower.style.animationDuration = (6 + Math.random() * 5) + "s";
     
     flower.style.setProperty('--random-rotation-start', `${Math.random() * 360}deg`);
     flower.style.setProperty('--random-rotation-end', `${360 + Math.random() * 720}deg`); 
     
     document.body.appendChild(flower);
     
-    setTimeout(() => flower.remove(), 5000); 
+    setTimeout(() => flower.remove(), 11500); 
 }
 
-setInterval(createFallingFlower, 200);
+setInterval(createFallingFlower, 650);
 
 document.addEventListener("click", (e) => {
     const numberOfHearts = 3;
