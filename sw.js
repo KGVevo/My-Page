@@ -1,18 +1,18 @@
 const CACHE_NAME = 'nuestro-rincon-v1';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/home.html',
-  '/diario.html',
-  '/reset-password.html',
-  '/styles.css',
-  '/scripts.js',
-  '/flower_script.js',
-  '/counter.js',
-  '/manifest.json',
-  '/icon.svg',
-  '/music_home.mp3',
-  '/music-2.mp3'
+  './',
+  './index.html',
+  './home.html',
+  './diario.html',
+  './reset-password.html',
+  './styles.css',
+  './scripts.js',
+  './flower_script.js',
+  './counter.js',
+  './manifest.json',
+  './icon.svg',
+  './music_home.mp3',
+  './music-2.mp3'
 ];
 
 self.addEventListener('install', (event) => {

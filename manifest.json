@@ -2,14 +2,14 @@
   "name": "Nuestro rincón - Diario de pareja",
   "short_name": "Nuestro rincón",
   "description": "Nuestro espacio privado: contador, diario compartido y recuerdos",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#0d0a22",
   "theme_color": "#a78bfa",
   "icons": [
     {
-      "src": "icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
