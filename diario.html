@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Diario</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#a78bfa">
     <link rel="stylesheet" href="styles.css">
     
 
@@ -135,5 +137,10 @@
 
     <!-- Script para la animación de flores, corazones y lógica del diario -->
     <script type="module" src="flower_script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      }
+    </script>
 </body>
 </html>
